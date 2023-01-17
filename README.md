@@ -57,7 +57,7 @@ The message to sign is predetermined to block one-time-use EOAs.
 
 The OpenZeppelin library is used to ensure security.
 
-If you have any questions, shoot me a DM on [Twitter](https://twitter.com/SirSupersecret).
+If you have any questions, shoot me a DM on [Twitter](https://twitter.com/drefrajo).
 
 If you want to see this contract on more chains (located at the same address), feel free to send some network native tokens to:
 0x33Ed4c754221b1ba203eF9790f12B26BeDBED903
