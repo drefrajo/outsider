@@ -1,0 +1,135 @@
+body {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.interactable {
+    transition-duration: 400ms;
+    margin: auto;
+    width: min(90%, 35rem);
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.interactable div {
+    margin: auto;
+    width: min(70%, 35rem);
+    padding: 0.5rem 0;
+}
+
+.interactable div .number {
+    font-weight: bold;
+    font-size: 1.7rem;
+    vertical-align:middle;
+}
+
+.status {
+    padding-bottom: 1rem;
+}
+
+.unknown {
+    background-color: rgb(208, 227, 255);
+}
+
+.true {
+    background-color: rgb(221, 255, 221);
+}
+
+.false {
+    background-color: rgb(254, 214, 214);
+}
+
+.unsupported {
+    background-color: rgb(234, 214, 253);
+}
+
+.waiting {
+    background-color: rgb(255, 249, 205);
+}
+
+.button {
+    padding: 0.5rem 28%;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    color: black;
+    background-color: rgb(236, 236, 236);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.button:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+.button:active {
+    background-color: rgb(185, 185, 185);
+}
+
+.button:disabled {
+    color: gray;
+    background-color: rgba(236, 236, 236, 0.548);
+}
+
+.navbar {
+    padding: 0.35rem 0rem 0.7rem 0rem;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 2.5rem;
+    font-size: min(2rem, 5vw);
+}
+
+.navbar span {
+    margin-left: min(2rem, 5vw);
+}
+
+.imgBox {
+    display: grid;
+    height: 100%;
+}
+
+.navbar img {
+    max-width: 10%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+header a {
+    text-decoration: none;
+    color: black;    
+}
+
+.navbar img {
+    width: 4rem;
+    vertical-align: middle;
+}
+
+.footer {
+    padding: 0.7rem 0rem 0rem 0rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+.footer img {
+    width: 2rem;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.text {
+    margin: auto;
+    width: min(80%, 70rem);
+    padding: 0.3rem;
+}
+
+.address {
+    font-size: min(1rem, 3vw);
+}
+
+h1 {
+    font-size: 1.7rem;
+}

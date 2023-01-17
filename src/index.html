@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Telling smart contracts and EOAs apart used to be difficult. The Outsider Protocol changes that.">
+    <title>Outsider</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/javascript" src="ethers-5.6.umd.min.js"></script>
+    <script type="application/javascript"  src="logic.js"></script>
+    <script defer src="cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet"> 
+</head>
+<header>
+    <a href="https://outsider.nugget.network">
+        <div class="navbar">
+            <div class="imgBox"></div>
+            <img src="favicon.ico" alt="" style="image-rendering: pixelated;"><span>The Outsider Protocol  </span> 
+        </div>
+    </a>
+</header>
+<body>
+    <div class="interactable" x-data="interactive" x-bind:class="state">
+        <div>
+            <div class="number">1.</div>
+            <button class="button" x-bind:disabled="progress == 0 && state != 'true' ? false : true" @click="connect()">Connect</button>
+        </div>
+        <div>
+            <div class="number">2.</div>
+            <button class="button" x-bind:disabled="progress == 1 && state != 'true' ? false : true" @click="sign()">Sign</button>
+        </div>
+        <div>
+            <div class="number">3.</div>
+            <button class="button" x-bind:disabled="progress == 2 && state != 'true' ? false : true" @click="submit()">Submit</button>
+        </div>
+        <div class="status">
+            <div x-text="readable"></div>
+        </div>
+    </div>
+    <div>
+        <div class="text">
+            <h1>Uhm, what's that?</h1>
+            <p>
+                Good you're asking.
+                <br>
+                To get straight to the point, this dApp verifies that your Ethereum Account is acctually an EOA (or Externally Owned Account) and NOT a smart contract.
+                Let that sink in for a moment.
+                <br>
+            </p>
+        </div>
+        <div class="text">
+            <h1>Why build this tool?</h1>
+            <p>
+                Consider the following question: Does an address belong to some smart contract or to some EOA?
+                We can tell them apart fairly easy (contacting/knowing the owner may be enough). 
+                For other smart contracts, though, this is a tricky question to answer. 
+                Solving said problem results in a more-complex-than-necessary user experience, as well as unnecessary burdens for developers.
+            </p>
+        </div>
+        <div class="text">
+            <h1>What is this useful for?</h1>
+            <p>
+                Soulbound Tokens for example.
+                <br>
+                Suppose a token with a lock-up period after buying it.
+                Next, let's assume that, instead of some user, a smart contract handles the buying process.
+                Finally, we add some functionality to pass on the ownership of said smart contract to someone else.
+                All of a sudden, our seemingly locked-up token becomes transferable again.
+                <br>
+                <br>
+                Non transferable assets are only possible when smart contracts are banned from owning them. 
+                Imagine one could buy a degree in some subject without first studying it.
+                Sounds stupid, but is, at least without a system like Outsider, unavoidable on Ethereum.
+            </p>
+        </div>
+        <div class="text">
+            <h1>How does Outsider help?</h1>
+            <p>
+                To verify that some address is in fact an EOA, developers need to recover a public key from a so called ECDSA signature.
+                While not as complicated as it sounds, such a procedure is not exactly trivial to implement. 
+                <br>
+                Outsider hides this logic and thereby reduces the difficulty to a singular, copy-and-pastable, line of code.
+                <br>
+                This means multiple things:
+                <br>
+                <br>
+                A) (New) Users are a little bit less overwhelmed by all this arguably cryptic software.
+                <br>
+                <br>
+                B) The end product is more secure.
+                <br>
+                <br>
+                C) Developers can spend more time on actually building innovative software.
+            </p>
+        </div>
+        <div class="text">
+            <h1>Awesome! How can I use this in my dApp?</h1>
+            <p>
+                That's easy. Visit this project's <a href="https://github.com/SirSupersecret/outsider">GitHub repo</a>.
+                Here you will find all the information you need.
+                <br>
+                Also, here's a convenient link to download the <a href="Outsider.json" download="">ABI</a> (if you don't know what that means, just ignore this line).
+            </p>
+        </div>
+        <div class="text">
+            <h1>Help?!</h1>
+            <p>
+                In case you were directed to this website, just press the three buttons one after another and follow the instructions your wallet software shows. 
+                That's it. ;)
+                <br>
+                <br>
+                In case you have any questions, shoot me a DM on <a href="https://twitter.com/SirSupersecret" target="_blank">Twitter</a>.
+                <br>
+                <br>
+                Also, if you want to see this protocol on more chains, with the same address everywhere, feel free to donate some network native tokens to:
+                <br>
+                <div class="address">
+                    0x33Ed4c754221b1ba203eF9790f12B26BeDBED903
+                </div>
+                <br>
+                The Outsider Protocol is currently deployed on: Ethereum, Goerli, Polygon, Mumbai at 
+                <div class="address">
+                    <a href="https://blockscan.com/address/0x0a1a6f16febF97417888dbdf1CbC3b30BD0B5b81">0x0a1a6f16febF97417888dbdf1CbC3b30BD0B5b81</a>
+                </div>
+            </p>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        <a href="https://github.com/SirSupersecret/outsider">
+            <img src="github.svg" alt="GitHub" style="margin-bottom: 0.7rem; margin-left: 0.7rem;">
+        </a>
+        <a href="https://twitter.com/SirSupersecret">
+            <img src="twitter.svg" alt="Twitter" style="margin-bottom: 0.7rem; padding-left: 2rem; padding-right: 1.4rem;">
+        </a>
+        <a href="https://nugget.network">
+            <img src="nugget.svg" alt="Nugget" style="width: 3.3rem; margin-bottom: 0.05rem;">
+        </a>
+    </div>
+</footer>
+</html>

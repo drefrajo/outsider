@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" version="1.1" viewBox="0 0 1024 1024" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io">
+
+<clipPath>
+<rect width="1024" height="1024"/>
+</clipPath>
+<g vectornator:layerName="IconSmaller">
+<path d="m517.76 353.54-271.97 137.24 86.193 165.69 522.18-22.594c51.046-2.51 67.782 77.824 7.047 85.16l-551.27 54.44c-28.295 2.003-50.553-2.894-66.628-33.019l-119.52-243.06c-8.147-18.331-6.295-42.772 16.252-57.247l342.6-182.85s26.051-16.12 51.473-5.914l333 159c42.709 22.937 15.431 86.142-33.279 67.369l-316.07-124.22z"/>
+</g>
+</svg>
